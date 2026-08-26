@@ -1,9 +1,12 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link ,useOutletcontext } from "react-router-dom";
 import './index.css';
-
+import { useState } from "react"; 
 
 
 export default function Lista_conIva() {
+  const lista = useOutletcontext();
+  const lista_conIva = lista.filter((item) => item.IVA === "SI");
+
   return (
     <div className="layout-app">
       {/* Encabezado de Navegación */}
@@ -15,8 +18,26 @@ export default function Lista_conIva() {
           <Link to="/sinIVA">Facturas sin IVA</Link>
         </nav>
       </header>
-      
-      <h1>LISTA DE FACTURAS CON IVA</h1>
+
+      <h1 className="titulo-seccion">LISTA DE FACTURAS CON IVA</h1>
+
+      <div className="lista-items">
+            {lista_conIva.length === 0 ? (
+              <p className="texto-vacio">No hay facturas generadas todavía.</p>
+            ) : (
+              lista.map((item) => (
+                <ul key={item.id} className="factura-card">
+                  <li><strong>Emisión:</strong> {item.Emision}</li>
+                  <li><strong>Vencimiento:</strong> {item.Vencimiento}</li>
+                  <li><strong>IVA:</strong> {item.IVA}</li>
+                  <li><strong>Metodo de Pago:</strong> {item.Metodopago}</li>
+                  <div className="acciones-card">
+                    <button type="button" className="btn-eliminar" onClick={() => handleChange_eliminar(item.id)}>Eliminar</button>
+                  </div>
+                </ul>
+              ))
+            )}
+          </div>
     </div>
   );
 }
