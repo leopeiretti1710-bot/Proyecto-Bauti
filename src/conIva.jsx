@@ -1,12 +1,13 @@
-import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import './index.css';
+import useState from "react";
+
 
 export default function Lista_conIva() {
   return (
     <div className="layout-app">
       <header className="header-panel">
-        <h2>Panel principal</h2>
+        <h1>Panel Principal</h1>
         <nav className="nav-panel">
           <Link to="/">Generador de Facturas</Link>
           <Link to="/conIVA">Facturas con IVA</Link>
@@ -14,5 +15,6 @@ export default function Lista_conIva() {
         </nav>
       </header>
     </div>
-   )
+
+  );
 }
