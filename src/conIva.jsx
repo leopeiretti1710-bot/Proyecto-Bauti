@@ -15,6 +15,8 @@ export default function Lista_conIva() {
           <Link to="/sinIVA">Facturas sin IVA</Link>
         </nav>
       </header>
+      
+      <h1>LISTA DE FACTURAS CON IVA</h1>
     </div>
   );
 }
