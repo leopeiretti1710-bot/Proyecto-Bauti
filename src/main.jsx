@@ -7,7 +7,7 @@ const rout = createRoot(document.getElementById('root'));
 rout.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/principal' element ={<Lista_facturas/>}/>
+      <Route path='/' element ={<Lista_facturas/>}/>
         <Route path='/conIVA' element ={<conIVA/>}/>
         <Route path='/sinIVA' element ={<sinIVA/>}/>
     </Routes>
