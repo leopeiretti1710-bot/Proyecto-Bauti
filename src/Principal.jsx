@@ -104,8 +104,6 @@ export default function Lista_facturas() {
           </form>
         </section>
       </div>
-
-      <Outlet />
     </div>
   );
 }
