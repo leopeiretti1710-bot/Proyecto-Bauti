@@ -9,8 +9,9 @@ rout.render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element ={<Lista_facturas/>}/>
+    </Routes>
+    <Routes>
       <Route path='/conIVA' element ={<Lista_conIva/>}/>
-      {/* <Route path='/sinIVA' element ={<Lista_sinIva/>}/> */}
     </Routes>
   </BrowserRouter>
 )
