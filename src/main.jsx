@@ -8,8 +8,9 @@ const rout = createRoot(document.getElementById('root'));
 rout.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/' element ={<Lista_facturas/>}/>
+      <Route path='/' element ={<Lista_facturas/>}>
         <Route path='/conIVA' element ={<Lista_conIva/>}/>
+      </Route>
     </Routes>
   </BrowserRouter>
 )
