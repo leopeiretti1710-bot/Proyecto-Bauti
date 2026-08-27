@@ -20,8 +20,7 @@ export default function Lista_facturas() {
   const handleChange_eliminar = (id) => {
     const nuevaLista = lista.filter((item) => item.id !== id);
     setLista(nuevaLista);
-  };
-
+  }
 
   return (
     <div className="layout-app">
@@ -34,7 +33,6 @@ export default function Lista_facturas() {
           <Link to="/sinIVA">Facturas sin IVA</Link>
         </nav>
       </header>
-    <Outlet context={[lista, setLista]} />
 
       {/* Título Principal debajo del Navegador */}
       <h1 className="titulo-seccion">GENERADOR DE FACTURAS</h1>
@@ -56,7 +54,7 @@ export default function Lista_facturas() {
                   <li><strong>IVA:</strong> {item.IVA}</li>
                   <li><strong>Metodo de Pago:</strong> {item.Metodopago}</li>
                   <div className="acciones-card">
-                    <button type="button" className="btn-eliminar" onClick={() => handleChange_eliminar(item.id)}>Eliminar</button>
+                  <button type="button" className="btn-eliminar" onClick={() => handleChange_eliminar(item.id)}>Eliminar</button>
                   </div>
                 </ul>
               ))
@@ -74,7 +72,7 @@ export default function Lista_facturas() {
             <input id="vencimiento" type="date" onChange={unica_funcion_cambio} name="Vencimiento" required />
 
             <label htmlFor="nombre">Escribí nombre del cliente:</label>
-            <input id="nombre" type="text" onChange={unica_funcion_cambio} name="Nombre" required />
+            <input id="nombre" type="text" onChange={unica_funcion_cambio} name= "Nombre" required />
 
             <label htmlFor="domicilio">Escribí Domicilio del cliente:</label>
             <input id="domicilio" type="text" onChange={unica_funcion_cambio} name="Domicilio" required />
