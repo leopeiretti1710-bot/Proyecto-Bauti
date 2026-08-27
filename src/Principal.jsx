@@ -34,6 +34,7 @@ export default function Lista_facturas() {
           <Link to="/sinIVA">Facturas sin IVA</Link>
         </nav>
       </header>
+    <Outlet context={[lista, setLista]} />
 
       {/* Título Principal debajo del Navegador */}
       <h1 className="titulo-seccion">GENERADOR DE FACTURAS</h1>
@@ -104,7 +105,6 @@ export default function Lista_facturas() {
           </form>
         </section>
       </div>
-      <Outlet context={[lista, setLista]} />
     </div>
   );
 }
