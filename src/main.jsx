@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { BrowserRouter, Routes , Route } from "react-router-dom";
+import { BrowserRouter, Routes , Route  } from "react-router-dom";
 import Lista_facturas from './Principal.jsx';
 import Lista_conIva from './conIva.jsx';
 
