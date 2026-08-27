@@ -4,7 +4,7 @@ import './index.css';
 
 export default function Lista_facturas() {
   const [lista, setLista] = useState([]);
-  const [Factura, setFactura] = useState({ id: 0, Emision: "", Vencimiento: "", Metodopago: "", IVA: "" });
+  const [Factura, setFactura] = useState({ id: 0, Nombre: "", Emision: "", Vencimiento: "", Metodopago: "", IVA: "" });
 
   const unica_funcion_cambio = (event) => {
     const nombreDelInput = event.target.name;
@@ -50,6 +50,7 @@ export default function Lista_facturas() {
             ) : (
               lista.map((item) => (
                 <ul key={item.id} className="factura-card">
+                  <li><strong>Nombre:</strong> {item.Nombre}</li>
                   <li><strong>Emisión:</strong> {item.Emision}</li>
                   <li><strong>Vencimiento:</strong> {item.Vencimiento}</li>
                   <li><strong>IVA:</strong> {item.IVA}</li>
@@ -73,7 +74,7 @@ export default function Lista_facturas() {
             <input id="vencimiento" type="date" onChange={unica_funcion_cambio} name="Vencimiento" required />
 
             <label htmlFor="nombre">Escribí nombre del cliente:</label>
-            <input id="nombre" type="text" onChange={unica_funcion_cambio} name="nombre" required />
+            <input id="nombre" type="text" onChange={unica_funcion_cambio} name="Nombre" required />
 
             <label htmlFor="domicilio">Escribí Domicilio del cliente:</label>
             <input id="domicilio" type="text" onChange={unica_funcion_cambio} name="Domicilio" required />
