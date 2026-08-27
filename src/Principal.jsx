@@ -26,7 +26,7 @@ export default function Lista_facturas() {
     <div className="layout-app">
       {/* Encabezado de Navegación */}
       <header className="header-panel">
-        <h2>Panel principal</h2>
+        <h2>Nutribox</h2>
         <nav className="nav-panel">
           <Link to="/">Generador de Facturas</Link>
           <Link to="/conIVA">Facturas con IVA</Link>
