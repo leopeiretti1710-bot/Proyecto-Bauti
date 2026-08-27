@@ -25,7 +25,7 @@ export default function Lista_conIva() {
             {lista_conIva.length === 0 ? (
               <p className="texto-vacio">No hay facturas generadas todavía.</p>
             ) : (
-              lista.map((item) => (
+              lista_conIva.map((item) => (
                 <ul key={item.id} className="factura-card">
                   <li><strong>Emisión:</strong> {item.Emision}</li>
                   <li><strong>Vencimiento:</strong> {item.Vencimiento}</li>

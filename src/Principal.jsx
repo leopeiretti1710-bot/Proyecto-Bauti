@@ -104,7 +104,7 @@ export default function Lista_facturas() {
           </form>
         </section>
       </div>
-      <Oulet context={[lista, setLista]} />
+      <Outlet context={[lista, setLista]} />
     </div>
   );
 }
