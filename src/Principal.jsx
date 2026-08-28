@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import './index.css';
 
 export default function Lista_facturas() {
-  const [lista, setLista] = useState([]);
+  const [lista, setLista] = useOutletContext();
   const [Factura, setFactura] = useState({ id: 0, Nombre: "", Emision: "", Vencimiento: "", Metodopago: "", IVA: "" });
 
   const unica_funcion_cambio = (event) => {
