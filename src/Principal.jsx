@@ -104,6 +104,7 @@ export default function Lista_facturas() {
           </form>
         </section>
       </div>
+      <Outlet context={[lista, setLista]} />
     </div>
   );
 }
