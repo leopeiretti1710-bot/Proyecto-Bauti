@@ -3,7 +3,7 @@ import { Outlet, Link , useOutletContext } from "react-router-dom";
 import './index.css';
 
 export default function Lista_facturas() {
-  const [lista, setLista] = useState([]);
+  const [lista, setLista] = useOutletContext();
   const [Factura, setFactura] = useState({ id: 0, Nombre: "", Emision: "", Vencimiento: "", Metodopago: "", IVA: "" });
 
   const unica_funcion_cambio = (event) => {
@@ -21,18 +21,10 @@ export default function Lista_facturas() {
     const nuevaLista = lista.filter((item) => item.id !== id);
     setLista(nuevaLista);
   }
-
+  
   return (
     <div className="layout-app">
-      {/* Encabezado de Navegación */}
-      <header className="header-panel">
-        <h2>Nutribox</h2>
-        <nav className="nav-panel">
-          <Link to="/lista_facturas">Generador de Facturas</Link>
-          <Link to="/conIVA">Facturas con IVA</Link>
-          <Link to="/sinIVA">Facturas sin IVA</Link>
-        </nav>
-      </header>
+
 
       {/* Título Principal debajo del Navegador */}
       <h1 className="titulo-seccion">GENERADOR DE FACTURAS</h1>
@@ -104,7 +96,6 @@ export default function Lista_facturas() {
           </form>
         </section>
       </div>
-      <Outlet context={[lista, setLista]} />
     </div>
   );
 }
