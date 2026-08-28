@@ -4,7 +4,6 @@ import { useState } from "react";
 
 
 export default function Lista_conIva() {
-  const [lista, setLista] = useOutletContext();
   const lista_conIva = lista.filter((item) => item.IVA === "SI");
 
   return (
@@ -13,7 +12,7 @@ export default function Lista_conIva() {
       <header className="header-panel">
         <h2>Panel principal</h2>
         <nav className="nav-panel">
-          <Link to="/">Generador de Facturas</Link>
+          <Link to="/lista_facturas">Generador de Facturas</Link>
           <Link to="/conIVA">Facturas con IVA</Link>
           <Link to="/sinIVA">Facturas sin IVA</Link>
         </nav>
