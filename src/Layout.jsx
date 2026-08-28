@@ -1,9 +1,10 @@
-import useState from "react"
-import { Outlet, Link, useOutletContext } from "react-router-dom";
+import {useState} from "react"
+import { Outlet, Link } from "react-router-dom";
 import './index.css';
 
 export default function Layout() {
     const [lista, setLista] = useState([]);
+
     return (
         <div className="layout-app">
             <header className="header-panel">

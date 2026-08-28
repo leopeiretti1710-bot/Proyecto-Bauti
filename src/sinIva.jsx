@@ -3,19 +3,19 @@ import './index.css';
 import { useState } from "react"; 
 
 
-export default function Lista_conIva() {
+export default function Lista_sinIva() {
   const [lista, setLista] = useOutletContext();
-  const lista_conIva = lista.filter((item) => item.IVA === "SI");
+  const lista_sinIva = lista.filter((item) => item.IVA === "NO");
 
   return (
     <div className="layout-app">
-      <h1 className="titulo-seccion">LISTA DE FACTURAS CON IVA</h1>
+      <h1 className="titulo-seccion">LISTA DE FACTURAS SIN IVA</h1>
 
       <div className="lista-items">
-            {lista_conIva.length === 0 ? (
+            {lista_sinIva.length === 0 ? (
               <p className="texto-vacio">No hay facturas generadas todavía.</p>
             ) : (
-              lista_conIva.map((item) => (
+              lista_sinIva.map((item) => (
                 <ul key={item.id} className="factura-card">
                   <li><strong>Emisión:</strong> {item.Emision}</li>
                   <li><strong>Vencimiento:</strong> {item.Vencimiento}</li>
