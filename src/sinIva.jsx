@@ -1,10 +1,10 @@
-import { Outlet, Link , useOutletContext } from "react-router-dom";
+import {  useOutletContext } from "react-router-dom";
 import './index.css';
-import { useState } from "react"; 
+
 
 
 export default function Lista_sinIva() {
-  const [lista, setLista] = useOutletContext();
+  const [lista] = useOutletContext();
   const lista_sinIva = lista.filter((item) => item.IVA === "NO");
 
   return (

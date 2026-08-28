@@ -13,8 +13,8 @@ rout.render(
       <Route path="/" element ={<Layout />}>
         <Route index element={<Navigate to="/lista_facturas" replace />} />
         <Route path="lista_facturas" element={<Lista_facturas />} />
-        <Route path="conIVA" element={<Lista_conIva />}  />
-        <Route path="sinIVA" element={<Lista_sinIva />}  />
+        <Route path="conIVA" element={<Lista_conIva />} />
+        <Route path="sinIVA" element={<Lista_sinIva />} />
       </Route>
     </Routes>
   </BrowserRouter>
