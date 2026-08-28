@@ -9,6 +9,7 @@ rout.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" >
+      <Route index element={<Lista_facturas />} />
       <Route path="lista_facturas" element={<Lista_facturas />}  />
         <Route path="conIVA" element={<Lista_conIva />}  />
       </Route>
