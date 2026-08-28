@@ -11,7 +11,7 @@ rout.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Lista_facturas />} context = {[lista , setLista]}>
-        <Route path="conIVA" element={<Lista_conIva />}context = {[lista , setLista]} />
+        <Route path="conIVA" element={<Lista_conIva />} context = {[lista , setLista]} />
       </Route>
     </Routes>
   </BrowserRouter>
