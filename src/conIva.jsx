@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 export default function Lista_conIva() {
-  const lista = useOutletContext();
+  const [lista, setLista] = useOutletContext();
   const lista_conIva = lista.filter((item) => item.IVA === "SI");
 
   return (

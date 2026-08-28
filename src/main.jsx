@@ -10,9 +10,8 @@ const rout = createRoot(document.getElementById('root'));
 rout.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Lista_facturas />} context = {[lista , setLista]}>
-        <Route path="conIVA" element={<Lista_conIva />}context = {[lista , setLista]} />
-      </Route>
+      <Route path="/" element={<Lista_facturas />} context = {[lista , setLista]}/>
+      <Route path="conIVA" element={<Lista_conIva />}context = {[lista , setLista]} />
     </Routes>
   </BrowserRouter>
 )
