@@ -15,7 +15,7 @@ export default function Layout() {
                     <Link to="/sinIVA">Facturas sin IVA</Link>
                 </nav>
             </header>
-            <Outlet context={[lista]} />
+            <Outlet context={[lista , setLista]} />
         </div>
     );
 }
